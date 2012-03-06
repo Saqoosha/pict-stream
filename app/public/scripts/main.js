@@ -146,7 +146,7 @@ App = (function() {
       }
       if (image_urls.length > 0) items.push(new Cell(image_urls, t));
     }
-    if (!append) item.reverse();
+    if (!append) items.reverse();
     _results = [];
     for (_l = 0, _len4 = items.length; _l < _len4; _l++) {
       item = items[_l];

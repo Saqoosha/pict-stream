@@ -86,7 +86,7 @@ class App
                     t.text = t.text.replace u.url, ''
             if image_urls.length > 0
                 items.push new Cell image_urls, t
-        item.reverse() if not append
+        items.reverse() if not append
         for item in items
             item.loaded = => @container.masonry 'reload'
             if append
