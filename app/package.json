@@ -1,0 +1,11 @@
+{
+    "name": "pictstream"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.8"
+    , "jade": ">= 0.0.1"
+    , "ntwitter": "0.2.10"
+    , "request": "2.9.153"
+  }
+}

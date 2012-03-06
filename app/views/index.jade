@@ -1,0 +1,61 @@
+!!!
+html
+   head
+      meta(name='viewport', content='width=320, initial-scale=1.0, user-scalable=no')
+      meta(property='og:title', content='pict-stream')
+      meta(property='og:type', contnt='website')
+      meta(property='og:image', content='http://pictstream-saqoosha.dotcloud.com/images/ogimage.jpg')
+      meta(property='og:url', content='http://pictstream-saqoosha.dotcloud.com/')
+      meta(property='og:site_name', content='pict-stream')
+      meta(property='fb:app_id', content='123341804461323')
+      title pict-stream
+      link(rel='stylesheet', href='/styles/style.css')
+      script(src='/scripts/jquery-1.7.1.min.js', type='text/javascript', charset='utf-8')
+      script(src='/scripts/jquery.masonry.min.js', type='text/javascript', charset='utf-8')
+      script(src='/scripts/encdec.js', type='text/javascript', charset='utf-8')
+      script(src='/scripts/main.js', type='text/javascript', charset='utf-8')
+   body
+      | <div id="fb-root"></div>
+      | <script>(function(d, s, id) {
+      |   var js, fjs = d.getElementsByTagName(s)[0];
+      |   if (d.getElementById(id)) return;
+      |   js = d.createElement(s); js.id = id;
+      |   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123341804461323";
+      |   fjs.parentNode.insertBefore(js, fjs);
+      | }(document, 'script', 'facebook-jssdk'));</script>
+      #header
+         #header-inner
+            #logo pict-stream
+            #login Login
+            #user
+               img#user-icon
+               span#user-name
+      #wrapper
+         #container
+            #items
+            #more
+               #more-inner more
+         #footer
+            #footer-inner
+               #saqoosha
+                  | Developed by
+                  a(href='http://twitter.com/Saqoosha') @Saqoosha
+                  | . Source code is available at 
+                  a(href='http://github.com/Saqoosha/') Github
+                  | .
+               #twitter
+                  | <a href="https://twitter.com/share" class="twitter-share-button" data-via="Saqoosha">Tweet</a>
+                  | <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+               #facebook
+                  | <div class="fb-like" data-href="http://pictstream-saqoosha.dotcloud.com/" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>                  
+
+      | <script type="text/javascript">
+      |   var _gaq = _gaq || [];
+      |   _gaq.push(['_setAccount', 'UA-29747600-1']);
+      |   _gaq.push(['_trackPageview']);
+      |   (function() {
+      |     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      |     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      |     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      |   })();
+      | </script>

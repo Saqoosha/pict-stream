@@ -1,0 +1,168 @@
+@import 'vendor'
+
+html, body
+   height 100%
+
+body
+   margin 0
+   padding 0
+   font 12px 'Georgia'
+   background #eeeeee url('/images/background.gif')
+
+a
+   color #00B7FF
+   text-decoration none
+
+   &:hover
+      text-decoration underline
+
+#header
+   position fixed
+   top 0
+   z-index 10000
+   width 100%
+   height 40px
+   background-color white
+   box-shadow 0 3px 3px rgba(0, 0, 0, 0.1)
+
+#header-inner
+   margin 0 auto
+   height 40px
+
+#logo
+   float left
+   margin-top 8px
+   font-size 20px
+   color #bbb
+
+#login
+   margin-left 10px
+   float right
+   font-size 14px
+   color #bbb
+   line-height 40px
+   cursor pointer
+
+#user
+   height 40px
+   float right
+   line-height 40px
+   font-size 14px
+   color #bbb
+   display none
+
+#user-icon
+   width 20px
+   height 20px
+   margin-right 5px
+   vertical-align middle
+
+#user-name
+   vertical-align middle
+
+#wrapper
+   position relative
+   min-height 100%
+
+#container
+   padding 50px 0 40px
+
+#items
+   margin 0 auto
+
+.item
+   width 300px
+   margin-bottom 10px
+   float left
+   background white
+   border-radius 5px
+   box-shadow 0 3px 3px rgba(0, 0, 0, 0.1)
+   font 11px "Lucida Grande"
+   
+   &>img
+      cursor pointer
+
+   &>img:first-child
+      border-radius 5px 5px 0 0
+   
+   &>.info
+      margin 5px 0
+   
+      & .profile-image
+         width 32px
+         height 32px
+         margin 0 5px
+         float left
+      
+      &>.text
+         width 252px
+         float left
+         
+         &>p
+            margin 0 0 2px
+            
+            &>.screen-name
+               font-weight bold
+         
+         &>.date
+            font-size 10px
+            line-height 12px
+            color #bbb
+
+.loading
+   width 300px
+   height 300px
+   background url('/images/loading.gif') no-repeat center center
+
+#more
+   width 500px
+   margin 0 auto 10px
+   background-color white
+   border-radius 5px
+   box-shadow 0 3px 3px rgba(0, 0, 0, 0.1)
+   cursor pointer
+   display none
+
+#more-inner
+   padding 8px
+   text-align center
+   font-size 20px
+   color #bbb
+
+#push
+   height 40px
+
+#footer
+   position absolute
+   bottom 0
+   width 100%
+   height 40px
+   overflow hidden
+
+#footer-inner
+   height 40px
+   margin 0 auto
+   background-color white
+   border-radius 5px 5px 0 0
+
+#saqoosha
+   float left
+   margin-left 15px
+   line-height 41px
+   color #bbb
+   &>a
+      color #bbb
+      &:hover
+         color #09DACC
+
+#share
+   float right
+   height 40px
+
+#facebook
+   margin 10px 15px 0 0
+   float right
+
+#twitter
+   margin-top 10px
+   float right
