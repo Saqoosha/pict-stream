@@ -16,6 +16,9 @@ a
    &:hover
       text-decoration underline
 
+
+// header------------
+
 #header
    position fixed
    top 0
@@ -27,6 +30,7 @@ a
 
 #header-inner
    margin 0 auto
+   width 920px
    height 40px
 
 #logo
@@ -35,11 +39,11 @@ a
    font-size 20px
    color #bbb
 
-#login
+#signin
    margin-left 10px
    float right
    font-size 14px
-   color #bbb
+   color #aaa
    line-height 40px
    cursor pointer
 
@@ -59,16 +63,68 @@ a
 
 #user-name
    vertical-align middle
+   
+   
+#signin-box
+   position fixed
+   top 40px
+   right 0
+   z-index 10001
+   box-shadow 0 3px 3px rgba(0, 0, 0, 0.1)
+   display none
+
+#up-arrow
+   position absolute
+   right 20px
+   width 0
+   height 0
+   border-left 7px solid transparent
+   border-right 7px solid transparent
+   border-bottom 7px solid white
+   
+#signin-box-inner
+   margin-top 7px
+   padding 15px
+   border-radius 5px
+   background-color white
+   
+   & .signin-button
+      display block
+      width 100%
+      margin 12px 0 0 0
+      border 1px solid #ddd
+      border-radius 3px
+      padding 6px 15px 5px 8px
+      background-color white
+      font-family 'Georgia'
+      font-size 16px
+      color #aaa
+      text-align left
+      cursor pointer
+      
+      &:hover
+         border-color #aaa
+
+      & img
+         margin-left 3px
+         vertical-align -2px
+      
+      &:first-child
+         margin-top 0
+
+
+// main-----------
 
 #wrapper
    position relative
    min-height 100%
 
 #container
-   padding 50px 0 40px
+   padding 50px 20px 40px
 
 #items
    margin 0 auto
+   width 920px
 
 .item
    width 300px
@@ -79,14 +135,11 @@ a
    box-shadow 0 3px 3px rgba(0, 0, 0, 0.1)
    font 11px "Lucida Grande"
    
-   &>img
-      cursor pointer
-
    &>img:first-child
       border-radius 5px 5px 0 0
    
    &>.info
-      margin 5px 0
+      padding 5px 0
    
       & .profile-image
          width 32px
@@ -108,6 +161,15 @@ a
             font-size 10px
             line-height 12px
             color #bbb
+
+.item-twitter
+   background white url('/images/twitter-type.png') bottom right no-repeat
+
+.item-facebook
+   background white url('/images/facebook-type.png') bottom right no-repeat
+
+.item-instagram
+   background white url('/images/instagram-type.png') bottom right no-repeat
 
 .loading
    width 300px
@@ -132,6 +194,10 @@ a
 #push
    height 40px
 
+
+
+// footer-----------
+
 #footer
    position absolute
    bottom 0
@@ -140,6 +206,7 @@ a
    overflow hidden
 
 #footer-inner
+   width 920px
    height 40px
    margin 0 auto
    background-color white
@@ -166,3 +233,9 @@ a
 #twitter
    margin-top 10px
    float right
+
+#header-inner, #footer-inner, #more, .masonry, .masonry-brick
+   transition all 0.7s ease-in-out 0
+
+
+

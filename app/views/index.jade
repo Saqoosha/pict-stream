@@ -12,6 +12,7 @@ html
       link(rel='stylesheet', href='/styles/style.css')
       script(src='/scripts/jquery-1.7.1.min.js', type='text/javascript', charset='utf-8')
       script(src='/scripts/jquery.masonry.min.js', type='text/javascript', charset='utf-8')
+      script(src='/scripts/jquery.cookie.js', type='text/javascript', charset='utf-8')
       script(src='/scripts/encdec.js', type='text/javascript', charset='utf-8')
       script(src='/scripts/main.js', type='text/javascript', charset='utf-8')
    body
@@ -26,7 +27,7 @@ html
       #header
          #header-inner
             #logo pict-stream
-            #login Login
+            #signin Connect your account
             #user
                img#user-icon
                span#user-name
@@ -48,6 +49,13 @@ html
                   | <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                #facebook
                   | <div class="fb-like" data-href="http://pictstream-saqoosha.dotcloud.com/" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>                  
+
+      #signin-box
+         #up-arrow
+         #signin-box-inner
+            button#twitter-signin.signin-button
+            button#facebook-signin.signin-button
+            button#instagram-signin.signin-button
 
       | <script type="text/javascript">
       |   var _gaq = _gaq || [];

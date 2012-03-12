@@ -16,16 +16,45 @@ app.configure ->
 
 app.configure 'development', ->
     app.use express.errorHandler dumpExceptions: true, showStack: true
+    app.set 'twitter',
+        consumer_key: 'kDaoenTjmz0lXMsQ2J1RfA'
+        consumer_secret: 'AKbuxc4MAuaVsoXaXiCLOQAQ1H4VLtW0jPNY4oNyVzc'
+    app.set 'facebook',
+        client_id: '129594067167016'
+        client_secret: 'af2e2ae847a3b6868ae0901b40428231'
+        redirect_uri: 'http://localhost:8080/facebook/signined'
+    app.set 'instagram'
+        client_id: '6db25edc78e24893b4c0e6969873d22a'
+        client_secret: 'cac0bfa38dfa478db4970774eec3daf1'
+        redirect_uri: 'http://localhost:8080/instagram/signined'
 
 app.configure 'production', ->
     app.use express.errorHandler()
+    app.set 'twitter',
+        consumer_key: 'kDaoenTjmz0lXMsQ2J1RfA'
+        consumer_secret: 'AKbuxc4MAuaVsoXaXiCLOQAQ1H4VLtW0jPNY4oNyVzc'
+    app.set 'facebook',
+        client_id: '123341804461323'
+        client_secret: 'f174f987d2c33ed3908c0214f6469835'
+        redirect_uri: 'http://pictstream-saqoosha.dotcloud.com/facebook/signined'
+    app.set 'instagram'
+        client_id: '3c292040fc7b42a58f4f05a49e37a24d'
+        client_secret: '00d63eef7a9140a4a83a9767bc196034'
+        redirect_uri: 'http://pictstream-saqoosha.dotcloud.com/instagram/signined'
 
 app.get '/', routes.index
-app.get '/signin', routes.signin
-app.get '/signout', routes.signout
 app.get '/get_user', routes.get_user
-app.get '/user_style', routes.user_style
-app.get /^\/api\/(.+)/, routes.twitter
+app.get '/twitter/signin', routes.twitter.signin app.settings.twitter
+app.get '/twitter/signined', routes.twitter.signined app.settings.twitter
+app.get '/twitter/signout', routes.twitter.signout
+app.get /^\/twitter\/api\/(.+)/, routes.twitter.api
+app.get '/user_style', routes.twitter.user_style
+app.get '/facebook/signin', routes.facebook.signin app.settings.facebook
+app.get '/facebook/signined', routes.facebook.signined app.settings.facebook
+app.get '/facebook/signout', routes.facebook.signout
+app.get '/instagram/signin', routes.instagram.signin app.settings.instagram
+app.get '/instagram/signined', routes.instagram.signined app.settings.instagram
+app.get '/instagram/signout', routes.instagram.signout
 app.get '/picplz/:id', routes.picplz
 app.get '/flickr/:id', routes.flickr
 
